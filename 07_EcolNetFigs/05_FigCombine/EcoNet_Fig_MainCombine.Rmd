@@ -1,0 +1,50 @@
+---
+title:
+author:
+output:
+  pdf_document:
+    latex_engine: xelatex
+    fig_caption: yes
+mainfont: Palatino
+header-includes:
+   - \usepackage{caption}
+   - \captionsetup[figure]{labelformat=empty}
+   - \pagenumbering{gobble} #### to delete page number
+---
+
+<center>
+
+![
+**Figure 1. Workflow of the present study and time series of the rice plot ecological communities.** **(a)** Workflow of the present study. **(b)** Mean DNA copy numbers of the ecological communities in rice plots. Different colors indicate different superkingdoms. **(c)** Temporal patterns of the number of ASVs detected from each plot. Different symbols and colors indicate different rice plots (_n_ = 122 for each plot; total n = 610).
+](../00_ReformatFigs/Fig_01.pdf)
+
+</center>
+
+
+<center>
+
+![
+**Figure 2. Reconstructed interaction network of the ecological community.** Lines indicate causal influences between nodes, and line colors indicate causal taxa (e.g., blue lines indicate the causal influences from bacterial species to another species). The size of each node (circle) represents the relative DNA concentration of the ASV (_n_ = 1197 for nodes). Different colors of nodes indicate different taxa, as shown at the bottom. Note that, although interaction strengths were quantified at each time point, the information on the time-varying interactions are not shown in the network. The detailed, daily fluctuating interaction network is available in Figure S5a and https://youtu.be/YzDVPxDxoTM as an animation.
+](../00_ReformatFigs/Fig_02.jpg){width=100%}
+
+</center>
+
+
+<center>
+
+![
+**Figure 3. Relationships between the interaction network properties.** **(a)**–**(d)** Co-varying relationships (correlations) between ASV diversity and properties of the interaction network, i.e., the mean interaction strength (**(a)**), interaction capacity (**(b)**), connectance (**(c)**) and coefficients of variations in population dynamics (**(d)**). Interaction capacity is defined as the sum of absolute values of interaction strength that a species gives or receives. Dashed line in **(a)** indicates a converged value of mean interaction strength ($\approx$ 0.03). **(e)**–**(h)** Relationships between interaction capacity, connectance, mean air temperature and total DNA copy numbers. **(i)**–**(n)** Causal influences of air temperature and total DNA copy numbers on connectance, interaction capacity and community diversity quantified by empirical dynamic modeling (EDM). Convergent cross mapping (CCM) was first applied to each pair, and then multivariate, regularized S-map was applied to quantify the causal influences. Red lines indicate significant nonlinear regressions by general additive model (GAM) and gray shaded region indicate 95% confidence interval.
+](../00_ReformatFigs/Fig_03.pdf)
+
+</center>
+
+
+
+<center>
+
+![
+**Figure 4. Potential drivers and mechanisms of the community diversity based on the interaction capacity hypothesis.** **(a)** Potential external drivers that contribute to the community diversity and network structure. **(b)** Mechanisms of community assembly. Extreme and optimal temperature would generally decrease and increase species interaction capacity, respectively. Spatial heterogeneity decreases connectance, which would subsequently increases community diversity. **(c)** Outcomes of community diversity and dynamics. Extreme temperature and low spatial heterogeneity generate a community with low diversity, strong interaction strength and unstable dynamics. On the other hand, optimal temperature and high spatial heterogeneity generate a community with high diversity, weak interaction strength and stable community dynamics. **(d)** Examples of ecological communities (low-diversity versus high-diversity community) according to the potential external drivers and the interaction capacity hypothesis.
+](../00_ReformatFigs/Fig_04.pdf){width=85%}
+
+</center>
+
