@@ -142,6 +142,14 @@ saveRDS(e_value_all, sprintf("%s/dynamic_stability_nonzeroridge.obj", output_fol
 saveRDS(compiled_smap_all, sprintf("%s/interaction_matrix_nonzeroridge.obj", output_folder07))
 
 # Save workspace and ojcects
+### Below codes are simply to keep RData file size small and not need to execute
+#rm(causal_dnaclim); rm(causal_climdna); rm(causal_dnaxdna)
+#rm(edna_all0)
+#rm(plot1_clim_df); rm(plot1_edna_df)
+#rm(plot2_clim_df); rm(plot2_edna_df)
+#rm(plot3_clim_df); rm(plot3_edna_df)
+#rm(plot4_clim_df); rm(plot4_edna_df)
+#rm(plot5_clim_df); rm(plot5_edna_df)
 save(list = ls(all.names = TRUE),
      file = sprintf("%s/%s.RData", output_folder07, output_folder07))
 #save.image(sprintf("%s/%s.RData", output_folder07, output_folder07))
