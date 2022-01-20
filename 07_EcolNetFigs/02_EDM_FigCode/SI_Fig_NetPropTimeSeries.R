@@ -61,8 +61,8 @@ g03 <- g03 + xlab(NULL)
 net_figs <- plot_grid(as.ggplot(net01) + theme(plot.margin = unit(c(0,0.2,0,0.5),"cm")),
                       as.ggplot(net02) + theme(plot.margin = unit(c(0,0.2,0,0.5),"cm")),
                       as.ggplot(net03) + theme(plot.margin = unit(c(0,0.2,0,0.5),"cm")),
-                      ncol = 3, labels = c("a", NULL, NULL), hjust = 0.02)
-prop_figs <- plot_grid(g01, ncol = 1, labels = c("b"),
+                      ncol = 3, labels = c("b", NULL, NULL), hjust = 0.02)
+prop_figs <- plot_grid(g01, ncol = 1, labels = c("c"),
                        align = "hv", hjust = 0.02)
 g_all <- plot_grid(net_figs,
                    prop_figs, rel_heights = c(1, 1), ncol = 1) +

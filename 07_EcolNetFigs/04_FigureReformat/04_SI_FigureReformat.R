@@ -47,10 +47,10 @@ Fig_DivTS_Fungi <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_FungiDivTS.obj")
 Fig_DivTS_Metaz <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_MetazDivTS.obj")
 Fig_DivTS_Virid <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_ViridiDivTS.obj")
 # Major phyla
-Fig_ProkBar <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_ProkBarAll2.obj") + guides(fill=guide_legend(title="Major phyla"))
-Fig_FungiBar <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_FungiBarAll2.obj") + guides(fill=guide_legend(title="Major phyla"))
-Fig_InvBar <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_InvBarAll2.obj") + guides(fill=guide_legend(title="Major phyla"))
-Fig_EukBar <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_EukBarAll2.obj") + guides(fill=guide_legend(title="Major phyla"))
+Fig_ProkBar <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_ProkBarAll2.obj") + guides(fill=guide_legend(title="Taxa"))
+Fig_FungiBar <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_FungiBarAll2.obj") + guides(fill=guide_legend(title="Taxa"))
+Fig_InvBar <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_InvBarAll2.obj") + guides(fill=guide_legend(title="Taxa"))
+Fig_EukBar <- readRDS("../00_RawFigs/01_Fig_eDNAts/Fig_EukBarAll2.obj") + guides(fill=guide_legend(title="Taxa"))
 
 ## Time series analysis
 # Time-varying network properties
@@ -107,10 +107,10 @@ Fig_AllNCPCRare <- plot_grid(Fig_AllNCRare, Fig_AllPC, ncol = 1, rel_heights = c
 
 ## Barplots
 DivTS_legend <- get_legend(Fig_DivTS_Prok + theme(legend.position = "bottom", legend.justification = "center"))
-Fig_DivTS_subset <- plot_grid(Fig_DivTS_Prok + ggtitle("Prokaryotes") + theme(legend.position = "none"),
-                              Fig_DivTS_Virid + ggtitle("Viridiplantae") + theme(legend.position = "none"),
-                              Fig_DivTS_Fungi + ggtitle("Fungi") + theme(legend.position = "none"),
-                              Fig_DivTS_Metaz + ggtitle("Metazoan") + theme(legend.position = "none"),
+Fig_DivTS_subset <- plot_grid(Fig_DivTS_Prok + ggtitle("16S sequencing") + theme(legend.position = "none"),
+                              Fig_DivTS_Virid + ggtitle("18S sequencing") + theme(legend.position = "none"),
+                              Fig_DivTS_Fungi + ggtitle("ITS sequencing") + theme(legend.position = "none"),
+                              Fig_DivTS_Metaz + ggtitle("COI sequencing") + theme(legend.position = "none"),
                               DivTS_legend, labels = c("(a)","(c)","(e)","(g)",NA),
                               ncol = 1, rel_heights = c(1,1,1,1,0.2), hjust = -0.02)
 Fig_BarTS_major <- plot_grid(Fig_ProkBar + ggtitle("Major phyla (16S sequencing)"),
@@ -143,7 +143,7 @@ Fig_ValidateMiSeq2 <- plot_grid(Fig_QuantusMiSeq[[1]] + theme(legend.position = 
                                 legend_plot,
                                 align = "hv", axis = "lrtb",
                                 ncol = 4, rel_widths = c(1,1,1,0.2),
-                                labels = c("(c)","(d)","(e)", NA))
+                                labels = c("(c)","(d)","(e)", NA), vjust = 1, hjust = 0.001)
 legend_meta <- get_legend(Fig_Metagenome[[1]])
 
 fm1 <- Fig_Metagenome[[1]] +
@@ -189,15 +189,15 @@ Fig_StabGrid <- plot_grid(Fig_SubsetStab[[1]] + theme(axis.title = element_text(
                           vjust = -1)
 Fig_TimeVaryingProp2 <- plot_grid(Fig_Nint + xlab("No. of interactions\nfor eash ASV on each day"),
                                   Fig_TimeVaryingProp[[2]], ncol = 2, rel_widths = c(1, 2.3),
-                                  align = "hv", axis = "lrbt", labels = c("(b)","(c)"))
+                                  align = "hv", axis = "lrbt", labels = c("(a)","(c)"))
 Fig_TimeVaryingProp3 <- plot_grid(Fig_TimeVaryingProp[[1]],
                                   Fig_TimeVaryingProp2, rel_heights = c(1, 1), ncol = 1) + 
   theme(plot.margin = unit(c(0,0,0,1),"cm"))
 
 Fig_TimeVaryingGrid <- plot_grid(Fig_TimeVaryingProp3,
-                                 NULL,
+                                 #NULL,
                                  Fig_StabGrid,
-                                 ncol = 1, rel_heights = c(3,0.2,1))
+                                 ncol = 1, rel_heights = c(3,1))
 
 
 #-------------------------------------------------#
@@ -245,7 +245,7 @@ plot_grid(Fig_DivTS_subset, Fig_BarTS_major,
 dev.off()
  
 # Figure S5
-pdf("../00_ReformatFigs/SI_Fig_05.pdf", width = 10, height = 12)
+pdf("../00_ReformatFigs/SI_Fig_05.pdf", width = 10, height = 11)
 Fig_TimeVaryingGrid; dev.off()
 
 # Figure S6
