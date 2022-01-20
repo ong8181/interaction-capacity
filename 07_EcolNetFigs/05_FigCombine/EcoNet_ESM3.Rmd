@@ -1,5 +1,5 @@
 ---
-title: \color{TitleColor} \Huge __Electronic Supplementary Material, Text for “Interaction capacity as a potential driver of community diversity”__
+title: \color{TitleColor} \huge __Electronic Supplementary Material, Text for “Interaction capacity as a potential driver of community diversity”__
 author: "Masayuki Ushio"
 output:
   pdf_document:
@@ -15,6 +15,7 @@ mainfont: Palatino
 fontsize: 11pt
 bibliography: citation_data/20191105_EcoNetPaper_citations.bib
 csl: citation_data/ecology-letters_ed.csl
+classoption: a4paper
 ---
 
 # Contents:
@@ -225,7 +226,7 @@ Ushio et al. [-@ushio_quantitative_2018] showed that the use of standard DNAs in
 ||\texttt{TGGCATCGATGAAGAACGCAGCGAA}|
 
 \newpage
-### Table S7. Sequences and the copy numbers of standard DNAs of animal mitochondorial COI
+### Table S7. Sequences and the copy numbers of standard DNAs of mitochondorial COI
 |Primer name| Sequence|
 |:------------|:-----------|
 |STD_mlCOI1|\texttt{GGAACAGGATGAACAGTTTACCCTCCACTGTCAACCAGTATTGCTCACAGAGGAGCTTCC}|
@@ -268,6 +269,7 @@ Ushio et al. [-@ushio_quantitative_2018] showed that the use of standard DNAs in
 ||\texttt{GCTGGTGGTGGTGACCCGATTTTGTATCAGCACCTATTTTGATTTTTTGGTCACCCTGAA}|
 ||\texttt{GTTTA}|
 
+\newpage
 # 3. Summary of sequence quality
 I performed MiSeq run four times to generate sequences from the four metabarcoding regions (i.e., 16S rRNA, 18S rRNA, ITS and COI). Summary of the sequence runs is provided below.
 
@@ -327,6 +329,8 @@ Shotgun metagenomic analysis was performed for a subset of the samples to check 
 
 In total, 20,601,323 reads (10.3 Gb for 4 samples) were generated (Table S10) and the quality of sequencing was generally high (>Q30 = 80.4%). The low quality reads and adapter sequences were removed using fastp (https://github.com/OpenGene/fastp) [@chen2018]. After the quality filtering, 14,315,030 sequence reads ramained and the filtered sequences were analyzed using phyloFlash (http://hrgv.github.io/phyloFlash/) [@gruber-vodicka2020]. phyloFlash extracted and assembled 16S sequences from the sequence reads. Then, taxonomy and the number of sequence reads assigned to each taxa were summarized in the same pipeline.
 
+Fig. 3f-i show the comparison between qMiSeq and the shotgun metagenomic analysis. In summary, the numbers of detected taxa were comparable between the two methods: 82-136 by qMiSeq and 99-118 by the shotgun metagenomic analysis. In addition, the community compositions detected by the two methods were also similar. For both methods, Proteobacteria and Bacteroidetes were the two most dominant phyla. Although qMiSeq detected Verrucomicrobia slightly more frequently than the shotgun metagenomic analysis did, the difference was not large. Thus, the shotgun metagenomic analysis also showed that qMiSeq reasonably captured the diversity and composition of the ecological communities in the present study.
+
 ### Table S10. Sequence results of the shotgun metagenomic analysis
 |Sample ID|Sampling date|Plot|Sequence reads|Data size|
 |:----------|:----------|:----------|:----------|:----------|
@@ -336,8 +340,6 @@ In total, 20,601,323 reads (10.3 Gb for 4 samples) were generated (Table S10) an
 |S566|2017/7/15|5|5,646,627|2.8 Gb|
 |||||||
 |total|||20,601,323|10.3 Gb|
-
-Fig. 3f-i show the comparison between qMiSeq and the shotgun metagenomic analysis. In summary, the numbers of detected taxa were comparable between the two methods: 82-136 by qMiSeq and 99-118 by the shotgun metagenomic analysis. In addition, the community compositions detected by the two methods were also similar. For both methods, Proteobacteria and Bacteroidetes were the two most dominant phyla. Although qMiSeq detected Verrucomicrobia slightly more frequently than the shotgun metagenomic analysis did, the difference was not large. Thus, the shotgun metagenomic analysis also showed that qMiSeq reasonably captured the diversity and composition of the ecological communities in the present study.
 
 
 # 10. A meta-analysis

@@ -77,6 +77,7 @@ d_r2 <- tibble("16S" = r2_pro,
                "COI" = r2_inv,
                "18S" = r2_euk)
 d_r2_long <- pivot_longer(d_r2, cols = 1:4)
+d_r2_long$name <- factor(d_r2_long$name, levels = c("16S", "18S", "ITS", "COI"))
 
 ## Extract example standard curves
 d_std_pro <- tibble(std_tab_pro)

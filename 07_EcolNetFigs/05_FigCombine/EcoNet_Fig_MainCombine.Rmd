@@ -10,6 +10,7 @@ header-includes:
    - \usepackage{caption}
    - \captionsetup[figure]{labelformat=empty}
    - \pagenumbering{gobble} #### to delete page number
+classoption: a4paper
 ---
 
 <center>
