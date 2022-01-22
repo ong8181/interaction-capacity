@@ -29,7 +29,6 @@ R scripts for nonlinear time series analysis (Empirical dynamic modeling).
 ## No.3: Meta-analysis (`03_MetaAnalysis` folder)
 R scripts for the meta-analysis. The data for the meta-analysis were collected by contacting authors of the original publications, and thus are not included in the repository.
 
-# Codes to revise the paper
 ## No.4: Quantitative metabarcoding v.s. other quantification methods (`04_QunatifyDNA` folder)
 R scripts to compare the quantitative capacity of quantitative metabarcoding v.s. other quantification methods.
 
@@ -42,8 +41,23 @@ Additional statistical analyses.
 ## No.7: Visualization (`07_EcoNetFigs` folder)
 Codes to create figures.
 
-## data (`data_compiled` folder)
-Climate data, DNA-based community data, sequence summary, and RData file are included.
+## Core data (`data_compiled` folder)
+Climate data, DNA-based community data, sequence summary, and RData file are compiled for those who want to view and reuse the data. Please read `README.txt` for the information about the data included in CSV files.
+
+If you are familiar with `R` and `phyloseq` package (https://joey711.github.io/phyloseq/), executing the following code is the easiest way to re-use or view the core data. 
+```
+load("data_compiled.RData")
+
+# This load the following objects in R
+# data_asv = "data_asvtable.csv"
+# data_climate = "data_climate.csv"
+# data_sample = "data_sample.csv"
+# data_tax = "data_taxa.csv"
+# phyloseq_obj = phyloseq object that includes data_asv, data_sample, and data_tax
+# regularized_smap_results = Jacobian matrix inferred using regularized, multivaraite S-map (this is a large object)
+```
+
+<img src="data_compiled/data_relationship.png" width="1000px">
 
 
 

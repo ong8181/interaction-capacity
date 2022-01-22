@@ -110,9 +110,9 @@ g8_all <- plot_grid(g8_1, g8_2, g8_3, g8_4, ncol = 2, labels = "auto", align = "
 ggsave(sprintf("%s/DNAcopyEntropy.pdf", output_folder08), plot = g8_all, width = 10, height = 10)
 
 # Save and output results
-#save(list = ls(all.names = TRUE),
-#     file = sprintf("%s/08_TSfilterPrepOut.RData", output_folder08))
-save.image(sprintf("%s/08_TSfilterPrepOut.RData", output_folder08))
+save(list = ls(all.names = TRUE),
+     file = sprintf("%s/08_TSfilterPrepOut.RData", output_folder08))
+#save.image(sprintf("%s/08_TSfilterPrepOut.RData", output_folder08))
 
 #### save session info
 writeLines(capture.output(sessionInfo()),
