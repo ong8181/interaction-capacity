@@ -48,13 +48,13 @@ If you are familiar with `R` and `phyloseq` package (https://joey711.github.io/p
 ```
 load("data_compiled.RData")
 
-# This load the following objects in R
-# data_asv = "data_asvtable.csv"
-# data_climate = "data_climate.csv"
-# data_sample = "data_sample.csv"
-# data_taxa = "data_taxa.csv"
-# phyloseq_obj = phyloseq object that includes data_asv, data_sample, and data_tax
-# regularized_smap_results = Jacobian matrix inferred using regularized, multivaraite S-map (this is a large object)
+# This loads the following objects in R
+## data_asv = "data_asvtable.csv"
+## data_climate = "data_climate.csv"
+## data_sample = "data_sample.csv"
+## data_taxa = "data_taxa.csv"
+## phyloseq_obj = phyloseq object that includes data_asv, data_sample, and data_tax
+## regularized_smap_results = Jacobian matrix inferred using regularized, multivaraite S-map (this is a large object)
 ```
 
 Alternatively, you may download `data_asvtable.csv`, `data_sample.csv`, and `data_taxa.csv`, and excute the following R script.
@@ -73,7 +73,7 @@ dim(data_asv); dim(data_sample); dim(data_taxa)
 all(rownames(data_asv) == rownames(data_sample))
 all(colnames(data_asv) == rownames(data_taxa))
 
- # Import to phyloseq
+# Import to phyloseq
 ps_all <- phyloseq(otu_table(data_asv, taxa_are_rows = FALSE),
                    sample_data(data_sample),
                    tax_table(as.matrix(data_taxa)))
@@ -81,7 +81,7 @@ ps_all <- phyloseq(otu_table(data_asv, taxa_are_rows = FALSE),
 
 The structure of the csv files are as follows: rownames of `data_asvtable.csv` equal to rownames of `data_sample.csv`, and colnames of `data_asv.csv` equal to rownames of `data_taxa.csv`.
 
-<img src="data_compiled/data_relationship.png" width="600px">
+<img src="data_compiled/data_relationship.png" width="800px">
 
 
 
