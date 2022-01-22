@@ -102,6 +102,10 @@ mv ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/*.xml xml
 
 # Delete temporal folder
 rm -r ftp.ddbj.nig.ac.jp
+
+# Convert bz2 to gz format
+#for f in *.bz2; do bzcat "$f" | gzip -c >"${f%.*}.gz"; done
+#rm *.bz2
 ```
 
 
