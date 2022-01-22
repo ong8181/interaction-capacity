@@ -1,0 +1,19 @@
+# This is a dummy file.
+# This file should be sequence files.
+# Download sequence files by executing the following commands.
+
+# Prepare folders
+cd ~/Desktop
+mkdir temp
+cd temp
+mkdir xml
+
+# Download data
+wget -r ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/DRA009661/
+
+# Move files
+mv ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/DRA009661/*/*.fastq.bz2 ./
+mv ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/DRA009661/*.xml xml
+
+# Delete temporal folder
+rm -r ftp.ddbj.nig.ac.jp

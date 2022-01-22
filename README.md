@@ -41,7 +41,7 @@ see LICENSE
 ## No.7: Visualization
 `07_EcoNetFigs` folder includes codes to create figures mainly using `ggplot2`.
 
-## Core data
+# Core data
 In `data_compiled` folder, compiled versions of climate data, DNA-based community data, sequence summary, and RData file are prepared for those who want to view and re-use the data. Please read `README.txt` for the information about the data included in CSV files.
 
 If you are familiar with `R` and `phyloseq` package (https://joey711.github.io/phyloseq/), executing the following code is the easiest way to re-use or view the core data. 
@@ -83,6 +83,26 @@ The structure of the csv files are as follows: rownames of `data_asvtable.csv` e
 
 <img src="data_compiled/data_relationship.png" width="800px">
 
+# Sequence data
+You may download sequence data (`*.fastq.bz2`) from DDBJ Sequence Read Archives (DRA) by executing the following commands. `XXXXXXXXX` should be DRA accession number for each MiSeq run: 16S data = DRA009658, ITS data = DRA009659, COI data = DRA009660, and 18S data = DRA009661.
+
+```
+# Prepare folders
+cd ~/Desktop
+mkdir temp
+cd temp
+mkdir xml
+
+# Download data
+wget -r ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/
+
+# Move files
+mv ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/*/*.fastq.bz2 ./
+mv ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/*.xml xml
+
+# Delete temporal folder
+rm -r ftp.ddbj.nig.ac.jp
+```
 
 
 
