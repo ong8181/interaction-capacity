@@ -1,9 +1,9 @@
-# R and shell scripts for Ushio (in press) _Proceedings of the Royal Society B: Biological Sciences_
-R and shell codes to reproduce the results in Ushio M (in press) "Interaction capacity as a potential driver of community diversity" _Proceedings of the Royal Society B: Biological Sciences_.
+# R and shell scripts for Ushio (in press) _Proceedings of the Royal Society B_
+R and shell codes to reproduce the results in Ushio M (in press) "Interaction capacity as a potential driver of community diversity" _Proceedings of the Royal Society B_.
 
 (Preprint: "Interaction capacity underpins community diversity" _bioRxiv_ https://doi.org/10.1101/2020.04.08.032524)
 
-**Note**: In this repository, only core result files are included due to the file size limitation. You may reproduce the main figures using the information available in this repository, but if you want to reproduce the full results, please re-run all analyses using DNA sequence data (deposited in DDBJ; see the manuscript) or contact the author (ong8181@gmail.com).
+**Note**: In this repository, only core result files are included due to the file size limitation. You may reproduce the main figures using the information available in this repository, but if you want to reproduce the full results, please re-run all analyses using DNA sequence data (deposited in DDBJ; see the bottom of this README) or contact the author (ong8181@gmail.com).
 
 # License
 see LICENSE
