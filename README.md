@@ -92,11 +92,14 @@ You may download sequence data (`*.fastq.bz2`) from DDBJ Sequence Read Archives 
 # Prepare folders
 cd ~/Desktop
 mkdir temp
+mkdir temp/xml
 cd temp
-mkdir xml
 
-# Download data
-wget -r ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/
+# Download data (downlaod only *.bz2 and *.xml files)
+wget -r --no-parent -A "*.bz2","*.xml" "ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/"
+
+# If you need to specify the proxy:
+#wget -r --no-parent -A "*.bz2","*.xml" -e FTP_PROXY=proxy.xxx.xx:xxxx "ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/"
 
 # Move files
 mv ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/*/*.fastq.bz2 ./
@@ -105,9 +108,11 @@ mv ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/DRA009/XXXXXXXXX/*.xml xml
 # Delete temporal folder
 rm -r ftp.ddbj.nig.ac.jp
 
-# Convert bz2 to gz format
-#for f in *.bz2; do bzcat "$f" | gzip -c >"${f%.*}.gz"; done
-#rm *.bz2
+# Convert bz2 to gz format (if you wish)
+#for f in *.bz2; do
+#  bzcat "$f" | gzip -c >"${f%.*}.gz"
+#  rm $f
+#done
 ```
 
 
