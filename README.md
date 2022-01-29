@@ -1,4 +1,6 @@
 # R and shell scripts for Ushio (in press) _Proceedings of the Royal Society B_
+[![DOI](https://zenodo.org/badge/449147833.svg)](https://zenodo.org/badge/latestdoi/449147833)
+
 R and shell codes to reproduce the results in Ushio M (in press) "Interaction capacity as a potential driver of community diversity" _Proceedings of the Royal Society B_.
 
 (Preprint: "Interaction capacity underpins community diversity" _bioRxiv_ https://doi.org/10.1101/2020.04.08.032524)
