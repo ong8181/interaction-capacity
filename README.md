@@ -60,7 +60,7 @@ load("data_compiled.RData")
 ## regularized_smap_results = Jacobian matrix inferred using regularized, multivaraite S-map (this is a large object)
 ```
 
-Alternatively, you may download `data_asvtable.csv`, `data_sample.csv`, and `data_taxa.csv`, and excute the following R script.
+Alternatively, you may download `data_asvtable.csv`, `data_sample.csv`, and `data_taxa.csv`, and execute the following R script.
 
 ```
 # Load phyloseq
@@ -82,7 +82,7 @@ ps_all <- phyloseq(otu_table(data_asv, taxa_are_rows = FALSE),
                    tax_table(as.matrix(data_taxa)))
 ```
 
-The structure of the csv files are as follows: rownames of `data_asvtable.csv` equal to rownames of `data_sample.csv`, and colnames of `data_asv.csv` equal to rownames of `data_taxa.csv`.
+The structures of the csv files are as follows: rownames of `data_asvtable.csv` equal to rownames of `data_sample.csv`, and colnames of `data_asv.csv` equal to rownames of `data_taxa.csv`.
 
 <img src="data_compiled/data_relationship.png" width="800px">
 
