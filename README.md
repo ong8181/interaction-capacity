@@ -113,7 +113,7 @@ rm -r ftp.ddbj.nig.ac.jp
 
 # Convert bz2 to gz format (if you wish)
 #for f in *.bz2; do
-#  bzcat "$f" | gzip -c >"${f%.*}.gz"
+#  bzcat "$f" | gzip -c >"${f%.bz2}.gz"
 #  rm $f
 #done
 ```
