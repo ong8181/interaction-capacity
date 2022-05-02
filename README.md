@@ -89,7 +89,9 @@ The structures of the csv files are as follows: rownames of `data_asvtable.csv` 
 # Sequence data
 You may download sequence data (`*.fastq.bz2`) from DDBJ Sequence Read Archives (DRA) by executing the following commands. `XXXXXXXXX` should be DRA accession number for each MiSeq run: 16S data = DRA009658, ITS data = DRA009659, COI data = DRA009660, and 18S data = DRA009661.
 
+<!-- solved, confirmed on 2022.5.2
 :heavy_exclamation_mark: **Currently, there are errors in the above four DRA submissions. Only forward reads are deposited in DRA. I am working to solve this issue. Sorry for the inconvenience.**
+-->
 
 ```
 # Prepare folders
